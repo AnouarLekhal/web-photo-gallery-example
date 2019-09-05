@@ -23,5 +23,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 For more details to how install the local environment consult the official documentations [here](https://angular.io/guide/setup-local). 
 
 # Further help
-To get more help on the Angular see the [official documentations](https://angular.io/docs).# web-photo-gallery-example
-# web-photo-gallery-example
+To get more help on the Angular see the [official documentations](https://angular.io/docs).
