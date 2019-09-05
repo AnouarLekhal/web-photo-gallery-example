@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-success text-white">Photos search</div>
+        <div class="card-body">
+            <form #form="ngForm" (ngSubmit)="onSearch(form.value)">
+                <div class="input-group mb-3">
+                    <input type="text" id="keyWord" name="keyWord" ngModel required [(ngModel)]="keyWord" class="form-control" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-success" type="submit" [disabled]="!form.valid">Go</button>
+                    </div>
+                </div>
+            </form>
+            <!-- <form #form="ngForm" (ngSubmit)="onSearch(form.value)">
+                <div class="form-group">
+                    <label for="keyWord" class="mr-sm-2">Key words :</label>
+                    <input type="text" name="keyWord" class="mr-sm-2" ngModel required [(ngModel)]="keyWord">
+                    <button type="submit" class="btn btn-primary mb-2" [disabled]="!form.valid">Search</button>
+                </div>
+            </form> -->
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header bg-light">Results of search</div>
+        <div class="card-body">
+            <div *ngIf="!isSearched || totalPhotos > 0; else notFound">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6" *ngFor="let dataPhoto of dataPhotos">
+                        <img src="{{dataPhoto.webformatURL}}" (click)="openDetailPhotoModal(dataPhoto.id)" class="img-fluid rounded photo">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <ul class="pagination d-flex flex-wrap">
+                        <li [ngClass]="{'active':currentPage===i+1}" *ngFor="let page of pages; let i=index" class="page-item clickable">
+                            <a class="page-link" (click)="goToPage(i)">{{i}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ng-template #notFound>
+                <h3 class="text-center"> Not found ! </h3>
+            </ng-template>
+        </div>
+    </div>
+</div>

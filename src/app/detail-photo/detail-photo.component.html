@@ -1,0 +1,18 @@
+<div class="modal-header bg-success">
+    <h4 class="modal-title text-white">Photo details</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true" class="close-icon">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="text-center">
+        <p>User : {{detailPhoto.user}}</p>
+        <img src="{{detailPhoto.userImageURL}}" class="img-thumbnail">
+        <div class="caption">
+            <p><span class="badge">Tags : </span>{{detailPhoto.tags}}</p>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Close clicked')">Close</button>
+</div>

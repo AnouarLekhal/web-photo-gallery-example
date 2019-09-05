@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div *ngIf="!isConnected">
+                <form #form="ngForm" (ngSubmit)="onSignIn(form.value)">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="username" name="username" id="username" ngModel required class="form-control" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" ngModel required class="form-control" placeholder="Enter password">
+                    </div>
+                    <button type="submit" class="btn btn-success" [disabled]="!form.valid">Sign in</button>
+                </form>
+            </div>
+            <div *ngIf="isConnected">
+                <button class="btn btn-danger" (click)="onSignOut()">Sign out</button>
+            </div>
+        </div>
+    </div>
+</div>

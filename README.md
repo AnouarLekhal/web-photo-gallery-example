@@ -1,27 +1,27 @@
-# WebPhotoGalleryExample
+# Web-Photo-Gallery-Example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
+This project is an example of a web gallery, to search and display photos, basing on [pixabay api](https://pixabay.com/api/docs/).
+The main goal of this project is to regroup the basic features of Angular. It cover the following items : 
+* Data-binding
+* Directives
+* Pipe
+* HttpClient
+* Forms
+* Obdervables & RxJS
+* Services
+* Model
+* Routing & navigation
+* Guard
+* Bootstrap & ng-bootstrap
+* Modal
 
-## Development server
+# Getting started
+Make sure that you have allready the [Angular CLI](https://github.com/angular/angular-cli#installation) installed.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+For more details to how install the local environment consult the official documentations [here](https://angular.io/guide/setup-local). 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Further help
+To get more help on the Angular see the [official documentations](https://angular.io/docs).# web-photo-gallery-example
+# web-photo-gallery-example

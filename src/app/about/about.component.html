@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-primary text-white">Description</div>
+        <div class="card-body">{{description}}</div>
+    </div>
+    <div class="card">
+        <div class="card-header bg-primary text-white">Contact information</div>
+        <div class="card-body">
+            <div class="list-group">
+                <div class="list-group-item">Name : {{basicInfo.fullName}}</div>
+                <div class="list-group-item">Mail : {{basicInfo.mail}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header bg-primary text-white">Application reviews</div>
+        <div class="card-body">
+            <form #form="ngForm" (ngSubmit)="onAddReview(form)">
+                <div class="input-group mb-3">
+                    <input type="text" name="message" id="message" ngModel required class="form-control" placeholder="Review">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Add review</button>
+                    </div>
+                </div>
+            </form>
+            <!-- <form #form="ngForm" (ngSubmit)="onAddReview(form)">
+                    <div class="form-group">
+                        <label for="message" class="mr-sm-2"> Review </label>
+                        <input type="text" name="message" class="mr-sm-2" ngModel required>
+                        <button type="submit" class="btn btn-primary mb-2" [disabled]="!form.valid">Add review</button>
+                    </div>
+                </form> -->
+            <!-- <div class="form-group">
+                    <h3>Add review</h3>
+                    <label for="message"></label>
+                    <input type="text" name="message" [(ngModel)]="review.message">
+                    <button class="btn btn-primary" [disabled]="!review.message" (click)="onAddReview()">Add review</button>
+                </div> -->
+            <div class="list-group list-group-flush" *ngFor="let review of reviews">
+                <div class="list-group-item">{{review.message}}
+                    <span class="badge badge-secondary float-right m-2">{{review.date | date: 'dd/MM/yyyy HH:mm:ss'}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
